@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ginterp"
+version = "0.0.1"
+dependencies = [
+  "pyvista",
+  "xarray",
+  "mpi4py",
+  "numpy",
+  "scipy"
+]
+requires-python = ">=3.10"
+description = "Post-processing utilities for G-ADOPT"
+readme = "README.md"
+
+[project.scripts]
+vtk-interp = "ginterp.interp:main"
+mpi-interp = "ginterp.mpi_shared_memory_interp:main"
